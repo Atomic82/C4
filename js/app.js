@@ -159,6 +159,8 @@ numOfTurns = 0;
 render()
 }
 
+console.log('hi')
+
 function render(){
   for (let i = 0; i < slots.length; i++){
 
