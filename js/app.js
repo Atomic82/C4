@@ -1,8 +1,7 @@
-
-/* ------Constants------ */
+/*-------------------------------- Constants --------------------------------*/
 const winningCombos = [
   [0, 1, 2, 3],
-  [3, 4, 5, 6], 
+  [3, 4, 5, 6],
   [7, 8, 9, 10], 
   [10, 11, 12, 13], 
   [14, 15, 16, 17], 
@@ -71,111 +70,129 @@ const winningCombos = [
   [12, 19, 26, 33], 
   [13, 20, 27, 34],
 ]
+// console.log(winningCombos)
 
+// const columns
 
-/* ------Variables------ */
-
-let slots, winner, turn
-const player1 = -1
-const player2 = 1
-let numOfTurns
-
-
-
-/* ------Cached Element Refs------ */
-
-const boardSlots = document.querySelector(".board")
-console.log('boardSlots')
-
-const emptyChip = document.getElementsByClassName(".emptyChip")
-
-
-// const video = document.querySelector('.video-player')
-// const video = video.querySelector('.video')
-// const play = video.querySelector('.play-button')
-
-/* ------Event Listeners------ */
+/*---------------------------- Variables (state) ----------------------------*/
+const playerRed = 1
+const playerYellow = -1
+let winner, turn, circleArray
+// let numOfTurns
 
 
 
-boardSlots.addEventListener("click", handleClick)
-
-
-
-/* ------Functions------ */
-init()
-
-function handleClick(event){
-
-
-  if (boardSlots[id] === null && winner === null){
-    boardSlots[id] = turn
-    turn = turn * -1
-    
-    if (winner) {
-      return;
-    }
-    console.log('winner')
-    render()
-    getWinner()
-  } 
-}
-
-// function swapIcon(){
-//   if(document.getElementsByClassName(emptyChip).src)
+/*------------------------ Cached Element References ------------------------*/
+const gameBoard = document.querySelectorAll(".circle")
+// console.log(boardCircles)
+const message = document.getElementById("message")
+// function switchTurn () {
 // }
 
-init();
+// console.log(gameBoard.children)
+/*----------------------------- Event Listeners -----------------------------*/
+gameBoard.forEach(function(circle){
+  circle.addEventListener("click", handleClick)
+});
+// console.log(boardCircles)
 
-function init(){
 
-  slots = [
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,
-    null, null, null, null, null, null, null,]
-  console.log(slots)
+/*-------------------------------- Functions --------------------------------*/
+init()
 
-turn = 1;
-winner = null;
-numOfTurns = 0;
+function handleClick(event) {
+  let circleIndex = parseInt(event.target.id);
+  const correctIdx = checkPlacement(circleIndex);
+  console.log(correctIdx)
+  circleArray[correctIdx] = turn;
 
-render()
+  turn = turn * -1;
+
+  // if (winner) {
+  //   return;
+  // }
+console.log(circleArray)
+// getWinner();
+render();
 }
 
-console.log('hi')
 
-function checkPlacement(idx){
-  for(let i = idx + 35; i <= 41 && i >= 0; i -=7){
-    if(boardSlots[i])
+function init() {
+  circleArray = [
+null, null, null, null, null, null, null,
+null, null, null, null, null, null, null,
+null, null, null, null, null, null, null,
+null, null, null, null, null, null, null,
+null, null, null, null, null, null, null,
+null, null, null, null, null, null, null,
+]
+
+  turn = 1
+  winner = null;
+  numOfTurns = 0
+
+  // message.innerText = ''
+  render()
+}
+
+
+function checkPlacement(idx) {
+  console.log('sanity')
+  for (let i = idx + 35; i <= 41 && i >= 0; i -=7){
+    if (circleArray[i] === null){
+      console.log(i)
+      return i;
+    }
   }
 }
 
-function render(){
-  for (let i = 0; i < boardSlots.length; i++){
 
-  boardSlots[i].onclick = () => {
-    console.log('ahhh')
+function render() {
+
+  for (let i = 0; i < circleArray.length; i++){
+  // console.log(squares[i])
+    if (circleArray[i] === 1){
+    gameBoard[i].style.backgroundColor = 'Red'
+    // message.textContent = 'Turn: Yellow'
+    } else if 
+    (circleArray[i] === -1) {
+    gameBoard[i].style.backgroundColor = 'Yellow'
+    // message.textContent = 'Turn: Red'
+    } else {
+      // gameBoard[i].textContent = ""
+    }
   }
-  }
+}
+
 
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){
-    const a = winningCombos[i][0]
-    const b = winningCombos[i][1]
-    const c = winningCombos[i][2]
-    const d = winningCombos[i][3]
+  //const winner = winningCombos[i]; 
+  // console.log(`This is instance ${i}`)
+      const a = winningCombos[i][0]
+      const b = winningCombos[i][1]
+      const c = winningCombos[i][2]
+      const d = winningCombos[i][3]
+//  console.log(a, b, c)
+//   console.log(`This is the fourth value`, winningCombos[i][3])
+        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
+            console.log('Red wins')
+          message.textContent = 'Red wins';
+            winner = 'Red'
+          } else if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === -4){
+            console.log('Yellow wins')
+          message.textContent = 'Yellow wins';
+            winner = 'Yellow'
+          }
 
-    if(slots[a] + slots[b] + slots[c] + slots[d] === 4){
-      console.log('Player wins')
-      //message
-    }else if(slots[a] + slots[b] + slots[c] + slots[d] === -4){
-      console.log('Computer wins')
-    }
-    }
-  if(numOfTurns === 42 && winner === null){
-    console.log('Tie')
-  }
+  }  
+  //     if(numOfTurns === 41 && winner === null){
+  //       console.log('Tie')
+  //       message.textContent = 'Tie';
+  // }
+  
 }
+
+// resetBtn.addEventListener('click', init)
+
+// init()
