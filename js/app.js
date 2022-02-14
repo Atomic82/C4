@@ -125,7 +125,7 @@ boardSlots.addEventListener("click", handleClick)
 /* ------Functions------ */
 
 function handleClick(event){
-  const id = event.target.id./Assets/emptyChip.png,/Assets/greenChip.png
+  // const id = event.target.id.Assets/emptyChip.png,Assets/greenChip.png
     if(slots[id] === null && winner === null){
       slots[id] = turn
       turn *= -1
