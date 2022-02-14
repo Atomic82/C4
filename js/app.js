@@ -88,8 +88,7 @@ const boardSlots = document.querySelector(".board")
 console.log('boardSlots')
 
 const emptyChip = document.getElementsByClassName(".emptyChip")
-const whiteChip = document.getElementsByClassName(".whiteChip")
-const redChip = document.getElementsByClassName(".redChip")
+
 
 // const video = document.querySelector('.video-player')
 // const video = video.querySelector('.video')
@@ -97,42 +96,29 @@ const redChip = document.getElementsByClassName(".redChip")
 
 /* ------Event Listeners------ */
 
-// playButton.addEventListener('click', (e) => {
-//   if(video.paused){
-//     video.play()
-//     e.target.textContent = 'playIcon'
-//   } else {
-//     video.pause()
-//     e.target.textContent = 'stopIcon'
-//   }
-//   })
+
 
 boardSlots.addEventListener("click", handleClick)
 
-// document.addEventListener("DOMContentLoaded", function(){
-
-//   document.body.addEventListener("touchstart", playVideo);
-//   function playVideo(){
-//     const video = document.getElementById('video')
-//     if(video.playing){
-//     } else {
-//       video.play();
-//     }
-//   }
-// })
 
 
 /* ------Functions------ */
+init()
 
 function handleClick(event){
-  // const id = event.target.id.Assets/emptyChip.png,Assets/greenChip.png
-    if(slots[id] === null && winner === null){
-      slots[id] = turn
-      turn *= -1
-      numOfTurns += 1
-      render()
-      getWinner()
+
+
+  if (boardSlots[id] === null && winner === null){
+    boardSlots[id] = turn
+    turn = turn * -1
+    
+    if (winner) {
+      return;
     }
+    console.log('winner')
+    render()
+    getWinner()
+  } 
 }
 
 // function swapIcon(){
@@ -161,39 +147,35 @@ render()
 
 console.log('hi')
 
-function render(){
-  for (let i = 0; i < slots.length; i++){
+function checkPlacement(idx){
+  for(let i = idx + 35; i <= 41 && i >= 0; i -=7){
+    if(boardSlots[i])
+  }
+}
 
-      if (slots[i] === 1){
-      emptyChip.children[i].replace(whiteChip)
-      // message.textContent = 'Turn: 0'
-      console.log('yo')
-      } else if 
-      (slots[i] === -1) {
-      boardSlots.children[i].append(redChip)
-      // message.textContent = 'Turn: X'
-      } else {
-      boardSlots.children[i].append = ""
-      }
-    }
+function render(){
+  for (let i = 0; i < boardSlots.length; i++){
+
+  boardSlots[i].onclick = () => {
+    console.log('ahhh')
+  }
   }
 
-// function getWinner(){
-//   for(let i = 0; i < winningCombos.length; i++){
-//     const a = winningCombos[i][0]
-//     const b = winningCombos[i][1]
-//     const c = winningCombos[i][2]
-//     const d = winningCombos[i][3]
+function getWinner(){
+  for(let i = 0; i < winningCombos.length; i++){
+    const a = winningCombos[i][0]
+    const b = winningCombos[i][1]
+    const c = winningCombos[i][2]
+    const d = winningCombos[i][3]
 
-//     if(slots[a] + slots[b] + slots[c] + slots[d] === 4){
-//       console.log('Blue wins')
-//     }else if(slots[a] + slots[b] + slots[c] + slots[d] === -4){
-//       console.log('Green wins')
-//     }
-//     }
-//   if(numOfTurns === 42 && winner === null){
-//     console.log('Tie')
-//   }
-
-// }
-init()
+    if(slots[a] + slots[b] + slots[c] + slots[d] === 4){
+      console.log('Player wins')
+      //message
+    }else if(slots[a] + slots[b] + slots[c] + slots[d] === -4){
+      console.log('Computer wins')
+    }
+    }
+  if(numOfTurns === 42 && winner === null){
+    console.log('Tie')
+  }
+}
