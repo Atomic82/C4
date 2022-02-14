@@ -81,20 +81,18 @@ let winner, turn, circleArray
 // let numOfTurns
 
 
-
+console.log('hi')
 /*------------------------ Cached Element References ------------------------*/
 const gameBoard = document.querySelectorAll(".circle")
-// console.log(boardCircles)
 const message = document.getElementById("message")
-// function switchTurn () {
-// }
 
-// console.log(gameBoard.children)
+
+
 /*----------------------------- Event Listeners -----------------------------*/
 gameBoard.forEach(function(circle){
   circle.addEventListener("click", handleClick)
 });
-// console.log(boardCircles)
+
 
 
 /*-------------------------------- Functions --------------------------------*/
@@ -164,7 +162,7 @@ function render() {
   }
 }
 
-
+console.log('hihi')
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){
   //const winner = winningCombos[i]; 
@@ -186,6 +184,7 @@ function getWinner(){
           }
 
   }  
+  
   //     if(numOfTurns === 41 && winner === null){
   //       console.log('Tie')
   //       message.textContent = 'Tie';
