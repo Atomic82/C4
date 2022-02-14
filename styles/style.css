@@ -1,0 +1,91 @@
+
+body {
+  background-color: black;
+  /* custom font would be cool */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  height: 100vh;
+  display: flex;
+  align-content: center;
+  justify-items: center;
+}
+
+/* .titleIcon {
+
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1vh;
+} */
+
+/* board.container {
+  height: 20vh;
+  display: flex;
+  border-width: 10px; 
+  border-color: white;
+}  */
+
+/* .titleTop {
+  background-color: white;
+  border-radius: white;
+} */
+
+
+.slots {
+  border: solid rgba(255, 255, 255, 0.776);
+  border-radius: 50%;
+  border-width: 40px;
+  }
+
+ 
+
+
+  .emptyChip{
+    height: 90px;
+  } 
+.redChip{
+  height: 90px;
+} 
+.whiteChip{
+  height: 90px;
+} 
+  
+.board {
+  display: grid;
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(6, 100px);
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100vh;
+} 
+
+
+
+
+
+/* ---- */
+/* 
+.video {
+  position: fixed;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -10;
+} 
+.play-button {
+  display: flex;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.776);
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+} */
