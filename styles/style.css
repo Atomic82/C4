@@ -61,10 +61,21 @@ body {
   width: 100vh;
 } 
 
+/* .emptyChip {
+} */
 
 .circle {
   border: solid red;
-  height: 6em;
-  width: 6em;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
+  
 }
+
+
+
+#C4image {
+  height: 10vh;
+  display: flex;
+}
+

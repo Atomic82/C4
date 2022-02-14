@@ -1,30 +1,30 @@
-// body {
-//   margin: 0;
-//   height: 100vh;
-//   cursor: "/Assets/SkeletonFinger.png", auto;
-// }
+body {
+  margin: 0;
+  height: 100vh;
+  cursor: "/Assets/SkeletonFinger.png", auto;
+}
 
-// .cursor {
-//   width: 20px;
-//   height: 20px;
-//   position: absolute;
-//   transition-duration: 200ms;
-//   transition-timing-function: ease-out;
-//   animation: cursorAnim .5s infinite alternative;
-// }
+.cursor {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  animation: cursorAnim .5s infinite alternative;
+}
 
-// .cursor::after {
-//   content: "";
-//   width: 20px;
-//   height: 20px;
-//   position: absolute;
-// }
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
 
-// @keyframes cursorAnim {
-//   from {
-//     transform: scale(1);
-//   }
-//   to {
-//     transform: scale(.7);
-//   }
-// }
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(.7);
+  }
+}
