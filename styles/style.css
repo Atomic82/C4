@@ -33,12 +33,9 @@ body {
   width: 100vh;
 } 
 
-.RedChip {
-  height: 10vh;
-  width: 10vw;
-} 
 
 .circle {
+  background-image: url("/Assets/RedChip.png");
   border: solid red;
   border-radius: 50%;
   height: 10vh;
