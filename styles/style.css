@@ -26,9 +26,10 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 100px);
   grid-template-rows: repeat(6, 100px);
-  align-items: center;
-  justify-items: center;
   justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
   margin: auto;
   width: 100vh;
 } 
@@ -62,4 +63,9 @@ body {
   background-image: url("/Assets/BackgroundTexture.jpeg");
   color: rgb(255, 0, 0);
   box-shadow: 0 5px 15px rgb(255, 0, 0);
+}
+
+p {
+  color: rgba(255, 255, 255, 0.678);
+  
 }

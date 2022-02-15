@@ -134,21 +134,18 @@ init()
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
   const correctIdx = checkPlacement(circleIndex);
-  console.log(correctIdx)
+
+  if (circleArray[correctIdx] === null && winner === null){
   circleArray[correctIdx] = turn;
-
-  turn = turn * -1;
-
-
-
-  // if (winner) {
-  //   return;
-  // }
-console.log(circleArray)
-
-getWinner()
-render();
-
+  
+  turn = turn * -1
+  numOfTurns += 1
+  const turnMsg = turn === 1? 'Red' : 'White'
+  message.textContent = `Turn: ${turnMsg}`
+  
+  render();
+  getWinner();
+  }
 }
 
 
@@ -166,7 +163,6 @@ null, null, null, null, null, null, null,
   winner = null;
   numOfTurns = 0
 
-  // message.innerText = ''
   render()
 }
 
@@ -218,10 +214,10 @@ function getWinner(){
             winner = 'White'
           }
           
-        //   if(numOfTurns === 41 && winner === null){
-        // console.log('Tie')
-        // message.textContent = 'Tie';
-        //   }
+          if(numOfTurns === 41 && winner === null){
+        console.log('Tie')
+        message.textContent = 'Tie';
+          }
   }  
 }
 
