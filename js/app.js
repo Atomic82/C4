@@ -86,14 +86,19 @@ console.log('hi')
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
 
-
+const detonatorFile = document.querySelector('#Detonator')
+const detonator = new Audio('/audio/Detonator.mp3')
 
 /*----------------------------- Event Listeners -----------------------------*/
 gameBoard.forEach(function(circle){
   circle.addEventListener("click", handleClick)
 });
 
-
+detonator.addEventListener('click', (evt) => {
+  detonator.volume = .10
+  detonator.play()
+  console.log(evt.target)
+})
 
 /*-------------------------------- Functions --------------------------------*/
 init()

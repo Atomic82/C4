@@ -45,6 +45,10 @@ body {
   width: 10vh;
 }
 
-
+#detonator {
+  height: 5vh;
+  width: 5vw;
+  border-radius: 50%;
+}
 
 
