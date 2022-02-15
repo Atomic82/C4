@@ -89,16 +89,17 @@ const message = document.getElementById("message")
 const detonatorFile = document.querySelector('#Detonator')
 const detonator = new Audio('/audio/Detonator.mp3')
 
+
 /*----------------------------- Event Listeners -----------------------------*/
 gameBoard.forEach(function(circle){
   circle.addEventListener("click", handleClick)
 });
 
-detonator.addEventListener('click', (evt) => {
-  detonator.volume = .10
-  detonator.play()
-  console.log(evt.target)
-})
+// detonatorFile.addEventListener('click', (evt) => {
+//   detonator.volume = .10
+//   detonator.play()
+// })
+
 
 /*-------------------------------- Functions --------------------------------*/
 init()
@@ -189,13 +190,16 @@ function getWinner(){
           message.textContent = 'White wins';
             winner = 'White'
           }
+          
+          if(numOfTurns === 41 && winner === null){
+        console.log('Tie')
+        message.textContent = 'Tie';
+          }
+        
   }  
   
   
-  //     if(numOfTurns === 41 && winner === null){
-  //       console.log('Tie')
-  //       message.textContent = 'Tie';
-  // }
+  
   
 }
 
