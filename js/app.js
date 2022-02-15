@@ -214,7 +214,7 @@ function getWinner(){
             winner = 'White'
           }
           
-          if(numOfTurns === 41 && winner === null){
+          if(numOfTurns === 42 && winner === null){
         console.log('Tie')
         message.textContent = 'Tie';
           }
