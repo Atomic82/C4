@@ -78,7 +78,6 @@ const winningCombos = [
 const playerRed = 1
 const playerYellow = -1
 let winner, turn, circleArray
-let numOfTurns
 // let numOfTurns
 
 
@@ -97,7 +96,7 @@ gameBoard.forEach(function(circle){
 
 
 /*-------------------------------- Functions --------------------------------*/
-
+init()
 
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
@@ -107,8 +106,7 @@ function handleClick(event) {
 
   turn = turn * -1;
 
-  const turnMsg = turn === 1 ? 'red' : 'white'
-    message.textContent = `Turn: ${turnMsg}`
+
 
   // if (winner) {
   //   return;
@@ -185,9 +183,6 @@ function getWinner(){
             console.log('White wins')
           message.textContent = 'White wins';
             winner = 'White'
-          } else (winner === null) {
-            console.log('Tie')
-            message.textContent = 'Tie';
           }
   }  
   
@@ -198,7 +193,6 @@ function getWinner(){
   // }
   
 }
-init()
 
 // resetBtn.addEventListener('click', init)
 

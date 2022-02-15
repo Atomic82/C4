@@ -11,10 +11,7 @@ body {
   
 }
 
-p {
-  color: white;
-  background-color: white;
-}
+
 
 
 .C4image {
@@ -36,10 +33,10 @@ p {
   width: 100vh;
 } 
 
-/* .redChip {
+.RedChip {
   height: 10vh;
   width: 10vw;
-} */
+} 
 
 .circle {
   border: solid red;
