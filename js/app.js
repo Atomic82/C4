@@ -154,7 +154,7 @@ function render() {
     // message.textContent = 'Turn: Yellow'
     } else if 
     (circleArray[i] === -1) {
-    gameBoard[i].style.backgroundColor = 'Yellow'
+    gameBoard[i].style.backgroundColor = 'White'
     // message.textContent = 'Turn: Red'
     } else {
       // gameBoard[i].textContent = ""
@@ -162,25 +162,23 @@ function render() {
   }
 }
 
-console.log('hihi')
 function getWinner(){
-  for(let i = 0; i < winningCombos.length; i++){
-  //const winner = winningCombos[i]; 
-  // console.log(`This is instance ${i}`)
+  for(let i = 0; i < winningCombos.length; i++){ 
+  console.log('hihi')
       const a = winningCombos[i][0]
       const b = winningCombos[i][1]
       const c = winningCombos[i][2]
       const d = winningCombos[i][3]
-//  console.log(a, b, c)
-//   console.log(`This is the fourth value`, winningCombos[i][3])
-        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
+
+      
+        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === winningCombos[i]){
             console.log('Red wins')
           message.textContent = 'Red wins';
             winner = 'Red'
           } else if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === -4){
-            console.log('Yellow wins')
-          message.textContent = 'Yellow wins';
-            winner = 'Yellow'
+            console.log('White wins')
+          message.textContent = 'White wins';
+            winner = 'White'
           }
 
   }  

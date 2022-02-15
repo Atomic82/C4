@@ -8,47 +8,18 @@ body {
   display: flex;
   align-content: center;
   justify-items: center;
+  
 }
 
-/* .titleIcon {
 
+
+.C4image {
+  height: 10vh;
   display: flex;
-  height: 15vh;
-  align-items: center;
-  justify-content: center;
-  margin-left: 1vh;
-} */
+  align-content: center;
+  justify-items: center;
+}
 
-/* board.container {
-  height: 20vh;
-  display: flex;
-  border-width: 10px; 
-  border-color: white;
-}  */
-
-/* .titleTop {
-  background-color: white;
-  border-radius: white;
-} */
-
-/* 
-.slots {
-  border: solid rgba(255, 255, 255, 0.776);
-  border-radius: 50%;
-  border-width: 40px;
-  }
- */
-
-
-  /* .emptyChip{
-    height: 90px;
-  } 
-.redChip{
-  height: 90px;
-} 
-.whiteChip{
-  height: 90px;
-}  */
   
 .board {
   display: grid;
@@ -61,21 +32,18 @@ body {
   width: 100vh;
 } 
 
-/* .emptyChip {
+/* .redChip {
+  height: 10vh;
+  width: 10vw;
 } */
 
 .circle {
   border: solid red;
-  height: 100px;
-  width: 100px;
   border-radius: 50%;
-  
-}
-
-
-
-#C4image {
   height: 10vh;
-  display: flex;
+  width: 10vh;
 }
+
+
+
 
