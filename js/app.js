@@ -110,8 +110,10 @@ function handleClick(event) {
   //   return;
   // }
 console.log(circleArray)
-// getWinner();
+
+getWinner()
 render();
+
 }
 
 
@@ -164,14 +166,14 @@ function render() {
 
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){ 
-  console.log('hihi')
+  console.log(circleArray)
       const a = winningCombos[i][0]
       const b = winningCombos[i][1]
       const c = winningCombos[i][2]
       const d = winningCombos[i][3]
 
       
-        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === winningCombos[i]){
+        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
             console.log('Red wins')
           message.textContent = 'Red wins';
             winner = 'Red'
@@ -180,8 +182,8 @@ function getWinner(){
           message.textContent = 'White wins';
             winner = 'White'
           }
-
   }  
+  
   
   //     if(numOfTurns === 41 && winner === null){
   //       console.log('Tie')
