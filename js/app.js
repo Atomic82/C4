@@ -97,6 +97,7 @@ detonatorFile.addEventListener('click', (evt) => {
   console.log(evt.target)
   detonator.volume = .1
   detonator.play()
+  // detonator.pause()
 })
 
 
@@ -206,18 +207,10 @@ function getWinner(){
             winner = 'White'
           }
           
-          if(numOfTurns === 41 && winner === null){
-        console.log('Tie')
-        message.textContent = 'Tie';
-          }
-        
+        //   if(numOfTurns === 41 && winner === null){
+        // console.log('Tie')
+        // message.textContent = 'Tie';
+        //   }
   }  
-  
-  
-  
-  
 }
 
-// resetBtn.addEventListener('click', init)
-
-// init()
