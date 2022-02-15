@@ -47,7 +47,12 @@ body {
 
 
 .audioButton {
-  height: 5vh;
-  width: 5vw;
+  height: 50px;
+  width: 50px;
   background-color: black;
+  border-radius: 50%;
+}
+
+.audioButton:hover {
+  background-color: rgba(255, 255, 255, 0.318);
 }
