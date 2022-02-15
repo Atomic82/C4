@@ -36,7 +36,9 @@ body {
 
 .circle {
   background-image: url("/Assets/RedChip.png");
-  border: solid red;
+  background-position: 50% 50%;
+  background-size: cover;
+  border: solid rgba(255, 0, 0, 0.229);
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
