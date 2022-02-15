@@ -89,14 +89,25 @@ const message = document.getElementById("message")
 const detonatorFile = document.querySelector('#detonator')
 const detonator = new Audio('/audio/Detonator.mp3')
 
+const detonatorOpenerFile = document.querySelector('#detonatorOpener')
+const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
+
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
 
 detonatorFile.addEventListener('click', (evt) => {
-  console.log('audio works')
+  console.log('3...2...1...')
   console.log(evt.target)
   detonator.volume = .1
   detonator.play()
+  // detonator.pause()
+})
+
+detonatorOpenerFile.addEventListener('load', (evt) => {
+  console.log('Bombs rigged')
+  console.log(evt.target)
+  detonatorOpenerFile.volume = .1
+  detonatorOpenerFile.play()
   // detonator.pause()
 })
 
