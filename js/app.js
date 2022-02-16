@@ -76,20 +76,20 @@ const winningCombos = [
 /*---------------------------- Variables (state) ----------------------------*/
 
 const playerRed = 1
-const playerYellow = -1
+const computerPlayer = -1
 let winner, turn, circleArray
 
 /*------------------------ Cached Element References ------------------------*/
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
 
-const detonatorFile = document.querySelector('#detonator')
-const detonator = new Audio('/audio/Detonator.mp3')
+// const detonatorFile = document.querySelector('#detonator')
+// const detonator = new Audio('/audio/Detonator.mp3')
 
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
-const resetBtn = document.getElementById('resetBtn')
+// const resetBtn = document.getElementById('resetBtn')
 const muteBtn = document.getElementById('muteBtn')
 
 let countDownEl = document.getElementById('countdown')
@@ -98,11 +98,11 @@ let timeLeft = 30
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
 
-detonatorFile.addEventListener('click', (evt) => {
-  console.log('IT WORKS')
-  console.log(evt.target)
+// detonatorFile.addEventListener('click', (evt) => {
+//   console.log('IT WORKS')
+//   console.log(evt.target)
   
-})
+// })
 
 detonatorOpenerFile.addEventListener('load', (evt) => {
   console.log('Bombs rigged')
@@ -146,10 +146,14 @@ function handleClick(event) {
   const turnMsg = turn === 1? 'Red' : 'White'
   message.textContent = `Turn: ${turnMsg}`
   
+
+
   render();
   getWinner();
+  
   detonator.play()
   detonator.volume = .2
+  
 
   
 // reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
@@ -160,7 +164,7 @@ function handleClick(event) {
   // }
 
   let timer = setInterval(function(){
-    countDownEl.textContent = timeLeft + ` s`
+    countDownEl.textContent = timeLeft + ` s to refresh`
     timeLeft -= 1
     console.log(timeLeft)
     if (timeLeft < 0) {
@@ -173,20 +177,18 @@ function handleClick(event) {
   },1000)
   }
 }
+
 init()
 
 
-muteBtn.addEventListener('click', (evt) => {
-  console.log('mute')
-  detonator.pause()
-})
 
-resetBtn.addEventListener('click', (evt) => {
-  console.log('RESET')
+
+// resetBtn.addEventListener('click', (evt) => {
+//   console.log('RESET')
   
-  //Need a thing here that resets the chips
+//   //Need a thing here that resets the chips
  
-})
+// })
 
 
 
@@ -203,7 +205,9 @@ null, null, null, null, null, null, null,
   turn = 1
   winner = null;
   numOfTurns = 0 
+  
   render()
+  
 }
 
 
@@ -228,17 +232,17 @@ function render() {
   for (let i = 0; i < circleArray.length; i++){
   // console.log(squares[i])
     if (circleArray[i] === 1){
-    // gameBoard[i].style.backgroundColor = 'Red'
-    const token=document.createElement('img')
-    token.src=redBomb
-    gameBoard[i].appendChild(token)
+    gameBoard[i].style.backgroundColor = 'Red'
+    // const token=document.createElement('img')
+    // token.src=redBomb
+    // gameBoard[i].appendChild(token)
 
     } else if 
     (circleArray[i] === -1) {
-    // gameBoard[i].style.backgroundColor = 'White'
-    const token=document.createElement('img')
-    token.src=whiteBomb
-    gameBoard[i].appendChild(token)
+    gameBoard[i].style.backgroundColor = 'White'
+    // const token=document.createElement('img')
+    // token.src=whiteBomb
+    // gameBoard[i].appendChild(token)
 
     } else {
       // gameBoard[i].textContent = ""
@@ -247,7 +251,10 @@ function render() {
   
 }
 
-
+muteBtn.addEventListener('click', (evt) => {
+  console.log('mute')
+  detonator.pause()
+})
 
 
 function getWinner(){
@@ -278,8 +285,8 @@ function getWinner(){
   
 }
 
-// //Refreshes page after 20 seconds, so hurry up and win bitch
-// setTimeout(function(){
-//   window.location.reload(1);
-// }, 30000)
-// console.log(setTimeout)
+//Refreshes page after 20 seconds, so hurry up and win bitch
+setTimeout(function(){
+  window.location.reload(1);
+}, 31000)
+console.log(setTimeout)

@@ -51,14 +51,20 @@ body {
 
 .circle {
   background-image: url("/Assets/RedChip.png");
-  background-position: 50% 50%;
+  /* background-position: 50% 50%; */
   background-size: cover;
-  border: solid rgba(255, 0, 0, 0.229);
+  border: solid rgba(255, 0, 0, 0.605);
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
 }
 
+.circle img{ 
+  object-fit: cover;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
 /* .tenor-gif-embed {
   height: 100vh;
   width: 100vw;
@@ -68,18 +74,28 @@ body {
   z-index: -10;
 } */
 
-.button {
+button {
   background-image: url("/assets/SeeThroughBomb.png");
-  display: flex;
-  /* background-color: rgba(0, 0, 0, 0.516);
-  color: rgba(255, 255, 255, 0.678); */
+  background-size: cover;
+  display: flex-end;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.516);
+  color: rgba(255, 255, 255, 0.678); 
+  background-position: 50% 50%;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
 }
 
-/* .button:hover {
-  background-image: url("/Assets/BackgroundTexture.jpeg");
+button:hover {
+  
   color: rgb(255, 0, 0);
   box-shadow: 0 5px 15px rgb(255, 0, 0);
-} */
+} 
 
 .messagescreen {
   height: 10vh;
