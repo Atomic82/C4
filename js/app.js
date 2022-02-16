@@ -89,7 +89,8 @@ const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
-// const reset = document.getElementById('reset')
+const resetBtn = document.getElementById('resetBtn')
+
 let countDownEl = document.getElementById('countdown')
 let timeLeft = 20
 
@@ -148,7 +149,22 @@ function handleClick(event) {
   render();
   getWinner();
   detonator.play()
-  detonator.volume = .5
+  
+  detonator.volume = .2
+  
+
+  let timer = setInterval(function(){
+    countDownEl.textContent = timeLeft + ` s`
+    timeLeft -= 1
+    console.log(timeLeft)
+    if (timeLeft < 0) {
+      countDownEl.textContent = 'RIP'
+      // explosion.start(500) FIND A CONFETTI ALTERNATIVE
+      //the countdown then resets the pieces
+      //the countdown then cues an explosion mp3
+      clearInterval(timer)
+    }
+  },1000)
   }
 }
 
@@ -183,18 +199,7 @@ function checkPlacement(idx) {
   }
 }
 
-let timer = setInterval(function(){
-  countDownEl.textContent = timeLeft + ` s remaining to detonation`
-  timeLeft -= 1
-  console.log(timeLeft)
-  if (timeLeft < 0) {
-    countDownEl.textContent = 'RIP'
-    // explosion.start(500) FIND A CONFETTI ALTERNATIVE
-    //the countdown then resets the pieces
-    //the countdown then cues an explosion mp3
-    clearInterval(timer)
-  }
-},1000)
+
 
 
 const redBomb = '../assets/RedBomb.png'
@@ -218,7 +223,7 @@ function render() {
     const token=document.createElement('img')
     token.src=whiteBomb
     gameBoard[i].appendChild(token)
-    // message.textContent = 'Turn: Red'
+
     } else {
       // gameBoard[i].textContent = ""
     }
@@ -227,7 +232,7 @@ function render() {
 }
 
 
-// reset.addEventListener('click', init)
+resetBtn.addEventListener('click', init)
 // reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
 
 function getWinner(){

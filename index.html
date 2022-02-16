@@ -14,6 +14,8 @@
 	<img src="/assets/C4.png">
 </div>
 
+<p id="message"></p>
+
 <!-- <script>
 	
 	function timedRefresh(timeoutPeriod) {
@@ -30,9 +32,7 @@
 </head>
 <body>
 
-<div class="messagescreen">
-<p id="countdown"></p>
-</div>
+
 
 <div id="detonator" src="/audio/Detonator.mp3">
 	<button class="button">Music
@@ -46,7 +46,11 @@
 	</button>
 </div>
 
-<p id="message"></p>
+<!-- <div class="tenor-gif-embed" data-postid="5203484" data-share-method="host" data-aspect-ratio="1.745" data-width="100%">
+
+<script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+</div>  -->
+
 
 <div id="detonatorOpener" src="/audio/DetonatorOpener.mp3">
 </div>
@@ -60,7 +64,11 @@
 		height: 100%;
 	}
 </style>
-  <section class="board">
+
+
+  <section>
+		
+		<div class="board">
 		<div class="circle" id="0"></div>
 		<div class="circle" id="1"></div>
 		<div class="circle" id="2"></div>
@@ -108,8 +116,11 @@
 		<div class="circle" id="39"></div>
 		<div class="circle" id="40"></div>
 		<div class="circle" id="41"></div>
-	
-		
+	</div>
+	<div class="messagescreen">
+		<p id="countdown"></p>
+		</div>
 	</section>	
+
 	</body>
 </html>
