@@ -208,9 +208,9 @@ function checkPlacement(idx) {
 
 
 const redBomb = '../assets/RedBomb.png'
-console.log(redBomb)
 const whiteBomb = '../assets/WhiteBomb.png'
-console.log(whiteBomb)
+
+// const redChip = '../assets/RedChip.png'
 
 function render() {
 
@@ -222,6 +222,8 @@ function render() {
     token.src=redBomb
     gameBoard[i].appendChild(token)
     
+    
+
     } else if 
     (circleArray[i] === -1) {
     // gameBoard[i].style.backgroundColor = 'White'

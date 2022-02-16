@@ -23,11 +23,13 @@ body {
 }
 
 #message {
-  background-color: yellow;
+  background-color: rgba(255, 255, 0, 0.544);
   display: flex;
   height: 10vh;
+  width: 10vw;
   align-content: center;
   justify-items: center;
+  align-items: center;
 }
 
   
@@ -92,9 +94,16 @@ body {
 .messagescreen {
   background-color: salmon;
   height: 10vh;
+  width: 10vw;
   color: rgba(255, 255, 255, 0.678);
   font-size: 20px;
   display: flex;
   align-content: center;
   justify-items: center;
+}
+
+
+.token {
+  height: 100px;
+  width: 100px;
 }
