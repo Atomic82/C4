@@ -99,8 +99,8 @@ let timeLeft = 20
 detonatorFile.addEventListener('click', (evt) => {
   console.log('3...2...1...')
   console.log(evt.target)
-  detonator.volume = .1
-  detonator.play()
+  
+
   // detonator.pause()
 })
 
@@ -147,6 +147,8 @@ function handleClick(event) {
   
   render();
   getWinner();
+  detonator.play()
+  detonator.volume = .5
   }
 }
 
@@ -182,7 +184,7 @@ function checkPlacement(idx) {
 }
 
 let timer = setInterval(function(){
-  countDownEl.textContent = timeLeft + ` s remaining to `
+  countDownEl.textContent = timeLeft + ` s remaining to detonation`
   timeLeft -= 1
   console.log(timeLeft)
   if (timeLeft < 0) {
