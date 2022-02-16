@@ -47,11 +47,12 @@ body {
 
 
 
-.audioButton {
+.button {
   display: flex;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
   background-color: rgba(0, 0, 0, 0.516);
+  color: rgba(255, 255, 255, 0.678);
   border-radius: 50%;
   display: flex;
   justify-content: center;

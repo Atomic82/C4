@@ -92,6 +92,10 @@ const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
+const resetBtn = document.getElementById('reset')
+
+
+
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
 
@@ -178,12 +182,20 @@ function checkPlacement(idx) {
 }
 
 
+
+const redBomb = '../assets/RedBomb.png'
+console.log(redBomb)
+
 function render() {
 
   for (let i = 0; i < circleArray.length; i++){
   // console.log(squares[i])
     if (circleArray[i] === 1){
-    gameBoard[i].style.backgroundColor = 'Red'
+    // gameBoard[i].style.backgroundColor = 'Red'
+    const token=document.createElement('img')
+    token.src=redBomb
+    gameBoard[i].appendChild(token)
+    // gameBoard[i].src=redBomb
     // message.textContent = 'Turn: Yellow'
     } else if 
     (circleArray[i] === -1) {
@@ -194,6 +206,8 @@ function render() {
     }
   }
 }
+
+reset.addEventListener('click', init)
 
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){ 

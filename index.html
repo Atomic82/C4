@@ -9,24 +9,34 @@
 
 	<script defer src="./js/app.js"></script>
 	<title>C4</title>
-</head>
+
+
+
 <body>
 
 <div class="C4image">
 	<img src="/assets/C4.png">
 </div>
 
-
-
+</head>
 
 
 <div id="detonator" src="/audio/Detonator.mp3">
-	<button class="audioButton"><img src="/assets/BombFavicon.png"></button>
-</div>
-<div id="detonatorOpener" src="/audio/DetonatorOpener.mp3">
+	<button class="button">Music
+		<!-- <img src="/assets/BombFavicon.png"> -->
+	</button>
 </div>
 
-<div></div>
+<div id="reset">
+	<button class="button">Reset
+		<!-- <img src="/assets/BombFavicon.png"> -->
+	</button>
+</div>
+
+<p id="message"></p>
+
+<div id="detonatorOpener" src="/audio/DetonatorOpener.mp3">
+</div>
 <!-- <div id="bomb" src="/audio/Explosion.mp3">
 	<img src="/assets/RedChip.png">
 </div> -->
@@ -37,7 +47,7 @@
 		height: 100%;
 	}
 </style>
-<p id="message"></p>
+
 
   <section class="board">
 		<div class="circle" id="0"></div>
