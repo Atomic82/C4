@@ -201,7 +201,10 @@ function render() {
     // message.textContent = 'Turn: Yellow'
     } else if 
     (circleArray[i] === -1) {
-    gameBoard[i].style.backgroundColor = 'White'
+    // gameBoard[i].style.backgroundColor = 'White'
+    const token=document.createElement('img')
+    token.src=whiteBomb
+    gameBoard[i].appendChild(token)
     // message.textContent = 'Turn: Red'
     } else {
       // gameBoard[i].textContent = ""
