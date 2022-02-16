@@ -71,21 +71,14 @@ const winningCombos = [
   [13, 20, 27, 34],
 ]
 
-// const countdown = [
-  
-// ]
-// console.log(winningCombos)
 
-// const columns
 
 /*---------------------------- Variables (state) ----------------------------*/
+
 const playerRed = 1
 const playerYellow = -1
 let winner, turn, circleArray
-// let numOfTurns
 
-
-console.log('hi')
 /*------------------------ Cached Element References ------------------------*/
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
@@ -96,9 +89,9 @@ const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
-const reset = document.getElementById('reset')
-
-
+// const reset = document.getElementById('reset')
+let countDownEl = document.getElementById('countdown')
+let timeLeft = 10
 
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
@@ -188,6 +181,18 @@ function checkPlacement(idx) {
   }
 }
 
+let timer = setInterval(function(){
+  countDownEl.textContent = timeLeft + ' seconds remaining'
+  timeLeft -= 1
+  console.log(timeLeft)
+  if (timeLeft < 0) {
+    countDownEl.textContent = 'RIP'
+    // explosion.start(500) FIND A CONFETTI ALTERNATIVE
+    //the countdown then resets the pieces
+    //the countdown then cues an explosion mp3
+    clearInterval(timer)
+  }
+},1000)
 
 
 const redBomb = '../assets/RedBomb.png'
@@ -220,7 +225,8 @@ function render() {
 }
 
 
-reset.addEventListener('click', init)
+// reset.addEventListener('click', init)
+// reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
 
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){ 
