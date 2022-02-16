@@ -67,10 +67,9 @@ body {
   box-shadow: 0 5px 15px rgb(255, 0, 0);
 }
 
-p {
+.messagescreen {
   color: rgba(255, 255, 255, 0.678);
+  font-size: 2rem;
   display: flex;
-  
-  /* align-items: center; */
-  /* align-content: center; */
+  align-items: flex-end;
 }

@@ -91,7 +91,7 @@ const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
 // const reset = document.getElementById('reset')
 let countDownEl = document.getElementById('countdown')
-let timeLeft = 10
+let timeLeft = 20
 
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
@@ -182,7 +182,7 @@ function checkPlacement(idx) {
 }
 
 let timer = setInterval(function(){
-  countDownEl.textContent = timeLeft + ' seconds remaining'
+  countDownEl.textContent = timeLeft + ` s remaining to `
   timeLeft -= 1
   console.log(timeLeft)
   if (timeLeft < 0) {
