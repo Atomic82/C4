@@ -92,7 +92,7 @@ const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
-const resetBtn = document.getElementById('reset')
+const reset = document.getElementById('reset')
 
 
 
@@ -133,6 +133,7 @@ gameBoard.forEach(function(circle){
 
 
 /*-------------------------------- Functions --------------------------------*/
+
 init()
 
 function handleClick(event) {
@@ -167,7 +168,9 @@ null, null, null, null, null, null, null,
   winner = null;
   numOfTurns = 0
 
+  
   render()
+  
 }
 
 
@@ -197,8 +200,7 @@ function render() {
     const token=document.createElement('img')
     token.src=redBomb
     gameBoard[i].appendChild(token)
-    // gameBoard[i].src=redBomb
-    // message.textContent = 'Turn: Yellow'
+    
     } else if 
     (circleArray[i] === -1) {
     // gameBoard[i].style.backgroundColor = 'White'
@@ -210,7 +212,9 @@ function render() {
       // gameBoard[i].textContent = ""
     }
   }
+  
 }
+
 
 reset.addEventListener('click', init)
 
@@ -236,7 +240,13 @@ function getWinner(){
           if(numOfTurns === 42 && winner === null){
         console.log('Tie')
         message.textContent = 'Tie';
-          }
+        }
+        
   }  
+  
 }
 
+//Refreshes page after 20 seconds, so hurry up and win bitch
+setTimeout(function(){
+  window.location.reload(1);
+}, 30000)
