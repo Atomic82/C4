@@ -8,54 +8,23 @@
 	<link rel="shortcut icon" href="assets/BombFavicon.png">
 	<script defer src="./js/app.js"></script>
 	<title>C4</title>
-
-
-<div class="C4image">
-	<img src="/assets/C4.png">
-</div>
-
-
-
-<!-- <script>
-	
-	function timedRefresh(timeoutPeriod) {
-		setTimeout("location.reload(true);",timeoutPeriod);
-	}
-	
-	window.onload = timedRefresh(5000);
-	
-
-	</script> -->
-
-
-
 </head>
 <body>
 
 
+<div class="C4image"><img src="/assets/C4.png"></div>
+<div id="detonator" src="/audio/Detonator.mp3"></div>
+<div id="detonatorOpener" src="/audio/DetonatorOpener.mp3"></div>
 
-<div id="detonator" src="/audio/Detonator.mp3">
-</div>
-
-<div id="reset">
-	<button class="button">Reset
-		<!-- <img src="/assets/BombFavicon.png"> -->
-	</button>
-</div>
-<div id="muteBtn">
-	<button class="button">Mute
-		<!-- <img src="/assets/BombFavicon.png"> -->
-	</button>
-</div>
+<button id="resetBtn" class="button">Reset</button>
+<button id="muteBtn" class="button">Mute</button>
 
 <!-- <div class="tenor-gif-embed" data-postid="5203484" data-share-method="host" data-aspect-ratio="1.745" data-width="100%">
-
 <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 </div>  -->
 
 
-<div id="detonatorOpener" src="/audio/DetonatorOpener.mp3">
-</div>
+
 <!-- <div id="bomb" src="/audio/Explosion.mp3">
 	<img src="/assets/RedChip.png">
 </div> -->
@@ -68,62 +37,60 @@
 </style>
 
 
-  <section>
-		
-		<div class="board">
-		<div class="circle" id="0"></div>
-		<div class="circle" id="1"></div>
-		<div class="circle" id="2"></div>
-		<div class="circle" id="3"></div>
-		<div class="circle" id="4"></div>
-		<div class="circle" id="5"></div>
-		<div class="circle" id="6"></div>
+<section>	
+	<div class="board">
+	<div class="circle" id="0"></div>
+	<div class="circle" id="1"></div>
+	<div class="circle" id="2"></div>
+	<div class="circle" id="3"></div>
+	<div class="circle" id="4"></div>
+	<div class="circle" id="5"></div>
+	<div class="circle" id="6"></div>
 
-		<div class="circle" id="7"></div>
-		<div class="circle" id="8"></div>
-		<div class="circle" id="9"></div>
-		<div class="circle" id="10"></div>
-		<div class="circle" id="11"></div>
-		<div class="circle" id="12"></div>
-		<div class="circle" id="13"></div>
+	<div class="circle" id="7"></div>
+	<div class="circle" id="8"></div>
+	<div class="circle" id="9"></div>
+	<div class="circle" id="10"></div>
+	<div class="circle" id="11"></div>
+	<div class="circle" id="12"></div>
+	<div class="circle" id="13"></div>
 
-		<div class="circle" id="14"></div>
-		<div class="circle" id="15"></div>
-		<div class="circle" id="16"></div>
-		<div class="circle" id="17"></div>
-		<div class="circle" id="18"></div>
-		<div class="circle" id="19"></div>
-		<div class="circle" id="20"></div>
+	<div class="circle" id="14"></div>
+	<div class="circle" id="15"></div>
+	<div class="circle" id="16"></div>
+	<div class="circle" id="17"></div>
+	<div class="circle" id="18"></div>
+	<div class="circle" id="19"></div>
+	<div class="circle" id="20"></div>
 
-		<div class="circle" id="21"></div>
-		<div class="circle" id="22"></div>
-		<div class="circle" id="23"></div>
-		<div class="circle" id="24"></div>
-		<div class="circle" id="25"></div>
-		<div class="circle" id="26"></div>
-		<div class="circle" id="27"></div>
+	<div class="circle" id="21"></div>
+	<div class="circle" id="22"></div>
+	<div class="circle" id="23"></div>
+	<div class="circle" id="24"></div>
+	<div class="circle" id="25"></div>
+	<div class="circle" id="26"></div>
+	<div class="circle" id="27"></div>
 
-		<div class="circle" id="28"></div>
-		<div class="circle" id="29"></div>
-		<div class="circle" id="30"></div>
-		<div class="circle" id="31"></div>
-		<div class="circle" id="32"></div>
-		<div class="circle" id="33"></div>
-		<div class="circle" id="34"></div>
+	<div class="circle" id="28"></div>
+	<div class="circle" id="29"></div>
+	<div class="circle" id="30"></div>
+	<div class="circle" id="31"></div>
+	<div class="circle" id="32"></div>
+	<div class="circle" id="33"></div>
+	<div class="circle" id="34"></div>
 
-		<div class="circle" id="35"></div>
-		<div class="circle" id="36"></div>
-		<div class="circle" id="37"></div>
-		<div class="circle" id="38"></div>
-		<div class="circle" id="39"></div>
-		<div class="circle" id="40"></div>
-		<div class="circle" id="41"></div>
+	<div class="circle" id="35"></div>
+	<div class="circle" id="36"></div>
+	<div class="circle" id="37"></div>
+	<div class="circle" id="38"></div>
+	<div class="circle" id="39"></div>
+	<div class="circle" id="40"></div>
+	<div class="circle" id="41"></div>
 	</div>
-	<div class="messagescreen">
+		<div class="messagescreen">
 		<p id="countdown"></p>
 		<p id="message"></p>
 		</div>
-	</section>	
-
-	</body>
+</section>	
+</body>
 </html>

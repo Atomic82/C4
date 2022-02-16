@@ -34,7 +34,7 @@ body {
 
   
 .board {
-  background-color: rgba(11, 228, 11, 0.55);
+  background-color: rgba(11, 228, 11, 0.201);
   position: static;
   margin: 10vh auto;
   display: grid;

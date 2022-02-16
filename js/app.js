@@ -93,13 +93,13 @@ const resetBtn = document.getElementById('resetBtn')
 const muteBtn = document.getElementById('muteBtn')
 
 let countDownEl = document.getElementById('countdown')
-let timeLeft = 20
+let timeLeft = 30
 
 // const explosionFile = document.querySelector('#bomb')
 // const explosion = new Audio('/audio/Explosion.mp3')
 
 detonatorFile.addEventListener('click', (evt) => {
-  console.log('3...2...1...')
+  console.log('IT WORKS')
   console.log(evt.target)
   
 })
@@ -132,7 +132,7 @@ gameBoard.forEach(function(circle){
 
 /*-------------------------------- Functions --------------------------------*/
 
-init()
+// init()
 
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
@@ -149,9 +149,15 @@ function handleClick(event) {
   render();
   getWinner();
   detonator.play()
-  
   detonator.volume = .2
+
   
+// reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
+  
+  // if(firstClick) {
+  //   firstClick = false;
+
+  // }
 
   let timer = setInterval(function(){
     countDownEl.textContent = timeLeft + ` s`
@@ -167,12 +173,18 @@ function handleClick(event) {
   },1000)
   }
 }
+init()
+
 
 muteBtn.addEventListener('click', (evt) => {
   console.log('mute')
   detonator.pause()
 })
 
+resetBtn.addEventListener('click', (evt) => {
+  console.log('RESET')
+  //Need a thing here that resets the chips
+})
 
 function init() {
   circleArray = [
@@ -186,11 +198,8 @@ null, null, null, null, null, null, null,
 
   turn = 1
   winner = null;
-  numOfTurns = 0
-
-  
+  numOfTurns = 0 
   render()
-  
 }
 
 
@@ -239,8 +248,7 @@ function render() {
 }
 
 
-resetBtn.addEventListener('click', init)
-// reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
+
 
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){ 
