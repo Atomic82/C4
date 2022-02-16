@@ -33,8 +33,8 @@ body {
   
 .board {
   background-color: rgba(11, 228, 11, 0.55);
-  position: fixed;
-  margin: 10vh 10vh;
+  position: static;
+  margin: 10vh auto;
   display: grid;
   grid-template-columns: repeat(7, 100px);
   grid-template-rows: repeat(6, 100px);

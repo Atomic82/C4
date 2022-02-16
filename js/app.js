@@ -90,6 +90,7 @@ const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
 
 const resetBtn = document.getElementById('resetBtn')
+const muteBtn = document.getElementById('muteBtn')
 
 let countDownEl = document.getElementById('countdown')
 let timeLeft = 20
@@ -101,8 +102,6 @@ detonatorFile.addEventListener('click', (evt) => {
   console.log('3...2...1...')
   console.log(evt.target)
   
-
-  // detonator.pause()
 })
 
 detonatorOpenerFile.addEventListener('load', (evt) => {
@@ -112,6 +111,7 @@ detonatorOpenerFile.addEventListener('load', (evt) => {
   detonatorOpenerFile.play()
   // detonator.pause()
 })
+
 
 
 // explosionFile.addEventListener('click', (evt) => {
@@ -167,6 +167,11 @@ function handleClick(event) {
   },1000)
   }
 }
+
+muteBtn.addEventListener('click', (evt) => {
+  console.log('mute')
+  detonator.pause()
+})
 
 
 function init() {
