@@ -70,6 +70,10 @@ const winningCombos = [
   [12, 19, 26, 33], 
   [13, 20, 27, 34],
 ]
+
+// const countdown = [
+  
+// ]
 // console.log(winningCombos)
 
 // const columns
@@ -246,7 +250,8 @@ function getWinner(){
   
 }
 
-//Refreshes page after 20 seconds, so hurry up and win bitch
-setTimeout(function(){
-  window.location.reload(1);
-}, 30000)
+// //Refreshes page after 20 seconds, so hurry up and win bitch
+// setTimeout(function(){
+//   window.location.reload(1);
+// }, 30000)
+// console.log(setTimeout)
