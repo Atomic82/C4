@@ -185,6 +185,8 @@ function checkPlacement(idx) {
 
 const redBomb = '../assets/RedBomb.png'
 console.log(redBomb)
+const whiteBomb = '../assets/WhiteBomb.png'
+console.log(whiteBomb)
 
 function render() {
 
