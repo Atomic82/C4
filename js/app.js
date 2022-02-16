@@ -183,8 +183,12 @@ muteBtn.addEventListener('click', (evt) => {
 
 resetBtn.addEventListener('click', (evt) => {
   console.log('RESET')
+  
   //Need a thing here that resets the chips
+ 
 })
+
+
 
 function init() {
   circleArray = [
@@ -219,8 +223,6 @@ function checkPlacement(idx) {
 const redBomb = '../assets/RedBomb.png'
 const whiteBomb = '../assets/WhiteBomb.png'
 
-// const redChip = '../assets/RedChip.png'
-
 function render() {
 
   for (let i = 0; i < circleArray.length; i++){
@@ -230,8 +232,6 @@ function render() {
     const token=document.createElement('img')
     token.src=redBomb
     gameBoard[i].appendChild(token)
-    
-    
 
     } else if 
     (circleArray[i] === -1) {

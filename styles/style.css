@@ -16,14 +16,13 @@ body {
 
 .C4image {
   height: 10vh;
-  background-color: blue;
   display: flex;
   align-content: center;
   justify-items: center;
 }
 
 #message {
-  background-color: rgba(255, 255, 0, 0.544);
+
   display: flex;
   height: 10vh;
   width: 10vw;
@@ -34,7 +33,7 @@ body {
 
   
 .board {
-  background-color: rgba(11, 228, 11, 0.201);
+
   position: static;
   margin: 10vh auto;
   display: grid;
@@ -45,7 +44,7 @@ body {
   align-items: center;
   align-content: center;
   /* margin: 100px; */
-  width: 90vh;
+  width: 100vh;
 } 
 
 
@@ -70,29 +69,26 @@ body {
 } */
 
 .button {
-  
+  background-image: url("/assets/SeeThroughBomb.png");
   display: flex;
-  
   height: 50px;
   width: 50px;
-  background-color: rgba(0, 0, 0, 0.516);
-  color: rgba(255, 255, 255, 0.678);
+  /* background-color: rgba(0, 0, 0, 0.516);
+  color: rgba(255, 255, 255, 0.678); */
   border-radius: 50%;
-
   justify-content: center;
   justify-items: center;
   align-items: center;
   align-content: center;
 }
 
-.button:hover {
+/* .button:hover {
   background-image: url("/Assets/BackgroundTexture.jpeg");
   color: rgb(255, 0, 0);
   box-shadow: 0 5px 15px rgb(255, 0, 0);
-}
+} */
 
 .messagescreen {
-  background-color: salmon;
   height: 10vh;
   width: 10vw;
   color: rgba(255, 255, 255, 0.678);
@@ -102,8 +98,3 @@ body {
   justify-items: center;
 }
 
-
-.token {
-  height: 100px;
-  width: 100px;
-}
