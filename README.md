@@ -1,18 +1,18 @@
-
-C4 https://atomic82.github.io/Connect-Four/
+C4 
+The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
 ----
-
-Objective: 
-Create a browser-based Connect 4 clone that accurately models the standard game, but with a twist.
----- 
-
-The family fun game- digitalized, and now without plastic choking hazards for children under age four.
+[Play Game](https://atomic82.github.io/Connect-Four/)
 ----
-
+Screenshots
+----
+[Game board](/assets/ScreenshotGame.png)
+[Custom cursor](/assets/SkeleCursor.png)
+[Bomb](/assets/RedBomb.png)
+----
 User Stories
 ----
 
-
+----
 Stretch goals
 ----
 - Computer player
@@ -20,10 +20,11 @@ Stretch goals
 - Player clicks on slots will register anywhere on the board and "drop" a chip, not just from the top row of slots.
 - Upon loss against the computer, a gif of an explosion 
 
+Technology Implemented
+----
 
+Credits
+----
 
-Technology Implemented:
-
-Credits:
-
-Psuedocode:
+Psuedocode
+----
