@@ -12,6 +12,8 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 
 ![Bomb](/assets/RedBomb.png)
 
+![Wireframe](/assets/Wireframe.png)
+
 # Stretch goals💣
 ----
 - Computer player using minimax method.

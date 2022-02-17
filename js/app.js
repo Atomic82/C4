@@ -150,7 +150,6 @@ const whiteBomb = '../assets/WhiteBomb.png'
 function render() {
   for (let i = 0; i < circleArray.length; i++){
     if (circleArray[i] === 1){
-    // gameBoard[i].style.backgroundColor = 'Red'
     const token=document.createElement('img')
     token.src=redBomb
     document.getElementById(i).style.backgroundImage=`url(${redBomb})`
