@@ -1,6 +1,6 @@
 # C4💣
 ----
-[Play game](https://atomic82.github.io/Connect-Four/)
+[Play game](https://super-ant.surge.sh/)
 
 The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
 

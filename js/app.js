@@ -70,12 +70,8 @@ const winningCombos = [
   [12, 19, 26, 33], 
   [13, 20, 27, 34],
 ]
-
-
-
 /*---------------------------- Variables (state) ----------------------------*/
 let winner, turn, circleArray
-
 /*------------------------ Cached Element References ------------------------*/
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
@@ -84,32 +80,13 @@ const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
 const detonatorOpener = new Audio('/audio/DetonatorOpener.mp3')
 const muteBtn = document.getElementById('muteBtn')
-
 let countDownRefresh = document.getElementById('countdown')
 let timeLeft = 30
-
-
-
-// detonatorOpenerFile.addEventListener('load', (evt) => {
-//   console.log('Bombs rigged')
-//   console.log(evt.target)
-  
-//   // detonator.pause()
-// })
-
-
-
-
 /*----------------------------- Event Listeners -----------------------------*/
 gameBoard.forEach(function(circle){
   circle.addEventListener("click", handleClick)
 });
-
-
 /*-------------------------------- Functions --------------------------------*/
-
-
-
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
   const correctIdx = checkPlacement(circleIndex);
@@ -124,8 +101,6 @@ function handleClick(event) {
   
   render();
   getWinner();
-
-  
     } 
     detonator.play()
     detonator.volume = .1
@@ -143,30 +118,21 @@ null, null, null, null, null, null, null,
 null, null, null, null, null, null, null,
 null, null, null, null, null, null, null,
 ]
-
   turn = 1
   winner = null;
   numOfTurns = 0 
-
-  
-  
   render()
 
-  
   let timer = setInterval(function(){
     countDownRefresh.textContent = timeLeft + ` s to refresh`
     timeLeft -= 1
     console.log(timeLeft)
     if (timeLeft < 0) {
       countDownRefresh.textContent = 'RIP'
-      // explosion.start(500) FIND A CONFETTI ALTERNATIVE
-      //the countdown then resets the pieces
-      //the countdown then cues an explosion mp3
       clearInterval(timer)
       }
     },1000)
 }
-
 
 function checkPlacement(idx) {
   console.log('sanity')
@@ -202,7 +168,6 @@ muteBtn.addEventListener('click', (evt) => {
   detonator.pause()
 })
 
-
 function getWinner(){
   for(let i = 0; i < winningCombos.length; i++){ 
   console.log(circleArray)
@@ -210,8 +175,7 @@ function getWinner(){
       const b = winningCombos[i][1]
       const c = winningCombos[i][2]
       const d = winningCombos[i][3]
-
-      
+  
   if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
             console.log('Red wins')
           message.textContent = 'Red wins';

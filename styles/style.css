@@ -1,14 +1,12 @@
 
 body {
-  
-  background-image: url("/Assets/BackgroundTexture.jpeg");
+  background-image: url("../assets/BackgroundTexture.jpeg");
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
 	Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   height: 100vh;
   display: flex;
   align-content: center;
   justify-items: center;
-  
 }
 
 .C4image {
@@ -19,7 +17,6 @@ body {
 }
 
 #message {
-
   display: flex;
   height: 10vh;
   width: 10vw;
@@ -29,7 +26,6 @@ body {
 }
 
 .board {
-
   position: static;
   margin: 10vh auto;
   display: grid;
@@ -40,15 +36,12 @@ body {
   justify-items: center;
   align-items: center;
   align-content: center;
-  /* margin: 100px; */
   width: 100vh;
 } 
 
 .circle {
-  background-image: url("/Assets/RedChip.png");
-  /* background-position: 50% 50%; */
+  background-image: url("../assets/RedChip.png");
   background-size: cover;
-  /* border: solid rgba(0, 217, 255, 0.605); */
   border-radius: 50%;
   height: 10vh;
   width: 10vh;
@@ -61,9 +54,8 @@ body {
   width: 100%;
 }
 
-
 button {
-  background-image: url("/assets/SeeThroughBomb.png");
+  background-image: url("../assets/SeeThroughBomb.png");
   background-size: cover;
   display: flex-end;
   height: 100px;
@@ -80,7 +72,6 @@ button {
 }
 
 button:hover {
-  
   color: rgb(255, 0, 0);
   box-shadow: 0 5px 15px rgb(255, 0, 0);
 } 
