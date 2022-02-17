@@ -48,7 +48,7 @@ body {
   background-image: url("/Assets/RedChip.png");
   /* background-position: 50% 50%; */
   background-size: cover;
-  border: solid rgba(0, 217, 255, 0.605);
+  /* border: solid rgba(0, 217, 255, 0.605); */
   border-radius: 50%;
   height: 10vh;
   width: 10vh;

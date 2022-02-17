@@ -80,9 +80,9 @@ let winner, turn, circleArray
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
 const detonatorFile = document.querySelector('#detonator')
-// const detonator = new Audio('/audio/Detonator.mp3')
-// const detonatorOpenerFile = document.querySelector('#detonatorOpener')
-// const detonatorOpener = new Audio('/audio/DetonatorOpener.mp3')
+const detonator = new Audio('/audio/Detonator.mp3')
+const detonatorOpenerFile = document.querySelector('#detonatorOpener')
+const detonatorOpener = new Audio('/audio/DetonatorOpener.mp3')
 const muteBtn = document.getElementById('muteBtn')
 
 let countDownRefresh = document.getElementById('countdown')
@@ -165,7 +165,6 @@ null, null, null, null, null, null, null,
       clearInterval(timer)
       }
     },1000)
-    
 }
 
 
@@ -183,26 +182,20 @@ const redBomb = '../assets/RedBomb.png'
 const whiteBomb = '../assets/WhiteBomb.png'
 
 function render() {
-
   for (let i = 0; i < circleArray.length; i++){
     if (circleArray[i] === 1){
     // gameBoard[i].style.backgroundColor = 'Red'
     const token=document.createElement('img')
     token.src=redBomb
     document.getElementById(i).style.backgroundImage=`url(${redBomb})`
-    // gameBoard[i].appendChild(token)
-console.log(token)
     } else if 
     (circleArray[i] === -1) {
-    // gameBoard[i].style.backgroundColor = 'White'
     const token=document.createElement('img')
     token.src=whiteBomb
     document.getElementById(i).style.backgroundImage=`url(${whiteBomb})`
-
     } else {
     }
   }
-  
 }
 
 muteBtn.addEventListener('click', (evt) => {
@@ -236,6 +229,6 @@ function getWinner(){
   }  
 }
 
-// setTimeout(function(){
-//   window.location.reload(1);
-// }, 31000)
+setTimeout(function(){
+  window.location.reload(1);
+}, 31000)

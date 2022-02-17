@@ -6,11 +6,11 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 
 # Screenshots💣
 ----
-[Game board](/assets/ScreenshotGame.png)
+![Game board](/assets/ScreenshotGame.png)
 
-[Custom cursor](/assets/SkeleCursor.png)
+![Custom cursor](/assets/SkeleCursor.png)
 
-[Bomb](/assets/RedBomb.png)
+![Bomb](/assets/RedBomb.png)
 
 # Stretch goals💣
 ----
