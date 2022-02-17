@@ -1,9 +1,11 @@
 # C4💣
+----
 [Play game](https://atomic82.github.io/Connect-Four/)
-----
+
 The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
-----
+
 # Screenshots💣
+----
 [Game board](/assets/ScreenshotGame.png)
 
 [Custom cursor](/assets/SkeleCursor.png)
@@ -11,6 +13,7 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 [Bomb](/assets/RedBomb.png)
 
 # Stretch goals💣
+----
 - Computer player using minimax method.
 - Player clicks upon slots make an explosion noise.
 - Line through four chips showing a clear and decisive winner.
