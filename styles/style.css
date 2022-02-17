@@ -3,16 +3,13 @@ body {
   
   background-image: url("/Assets/BackgroundTexture.jpeg");
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-		Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+	Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   height: 100vh;
   display: flex;
   align-content: center;
   justify-items: center;
   
 }
-
-
-
 
 .C4image {
   height: 10vh;
@@ -31,7 +28,6 @@ body {
   align-items: center;
 }
 
-  
 .board {
 
   position: static;
@@ -39,6 +35,7 @@ body {
   display: grid;
   grid-template-columns: repeat(7, 100px);
   grid-template-rows: repeat(6, 100px);
+  margin: 0 auto;
   justify-content: center;
   justify-items: center;
   align-items: center;
@@ -46,8 +43,6 @@ body {
   /* margin: 100px; */
   width: 100vh;
 } 
-
-
 
 .circle {
   background-image: url("/Assets/RedChip.png");
@@ -60,7 +55,7 @@ body {
 }
 
 .circle img{ 
-  object-fit: cover;
+  object-fit: contain;
   overflow: hidden;
   height: 100%;
   width: 100%;

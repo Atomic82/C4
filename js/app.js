@@ -82,17 +82,13 @@ let winner, turn, circleArray
 /*------------------------ Cached Element References ------------------------*/
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
-
-// const detonatorFile = document.querySelector('#detonator')
-// const detonator = new Audio('/audio/Detonator.mp3')
-
+const detonatorFile = document.querySelector('#detonator')
+const detonator = new Audio('/audio/Detonator.mp3')
 const detonatorOpenerFile = document.querySelector('#detonatorOpener')
-const detonatorTwo = new Audio('/audio/DetonatorOpener.mp3')
-
-// const resetBtn = document.getElementById('resetBtn')
+const detonatorOpener = new Audio('/audio/DetonatorOpener.mp3')
 const muteBtn = document.getElementById('muteBtn')
 
-let countDownEl = document.getElementById('countdown')
+let countDownRefresh = document.getElementById('countdown')
 let timeLeft = 30
 
 // const explosionFile = document.querySelector('#bomb')
@@ -104,11 +100,16 @@ let timeLeft = 30
   
 // })
 
+// window.addEventListener('load', (evt) => {
+//   console.log('Bombs primed')
+//   detonatorOpenerFile.volume = .1
+//   detonatorOpenerFile.play()
+// })
+
 detonatorOpenerFile.addEventListener('load', (evt) => {
   console.log('Bombs rigged')
   console.log(evt.target)
-  detonatorOpenerFile.volume = .1
-  detonatorOpenerFile.play()
+  
   // detonator.pause()
 })
 
@@ -132,7 +133,7 @@ gameBoard.forEach(function(circle){
 
 /*-------------------------------- Functions --------------------------------*/
 
-// init()
+
 
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
@@ -146,48 +147,30 @@ function handleClick(event) {
   const turnMsg = turn === 1? 'Red' : 'White'
   message.textContent = `Turn: ${turnMsg}`
   
-
-
   render();
   getWinner();
-  
-  detonator.play()
-  detonator.volume = .2
-  
 
   
-// reset.addEventListener(timer === 0, init) when the timer hits 0, reset board
-  
-  // if(firstClick) {
-  //   firstClick = false;
-
-  // }
-
-  let timer = setInterval(function(){
-    countDownEl.textContent = timeLeft + ` s to refresh`
-    timeLeft -= 1
-    console.log(timeLeft)
-    if (timeLeft < 0) {
-      countDownEl.textContent = 'RIP'
-      // explosion.start(500) FIND A CONFETTI ALTERNATIVE
-      //the countdown then resets the pieces
-      //the countdown then cues an explosion mp3
-      clearInterval(timer)
-    }
-  },1000)
-  }
+    } 
+    detonator.play()
+    detonator.volume = .1
+    detonatorOpenerFile.volume = .1
+    detonatorOpenerFile.play()
 }
-
 init()
 
 
 
+  // if(firstClick) {
+    //   firstClick = false;
+
+    // }
 
 // resetBtn.addEventListener('click', (evt) => {
 //   console.log('RESET')
   
 //   //Need a thing here that resets the chips
- 
+
 // })
 
 
@@ -205,9 +188,25 @@ null, null, null, null, null, null, null,
   turn = 1
   winner = null;
   numOfTurns = 0 
+
+  
   
   render()
+
   
+  let timer = setInterval(function(){
+    countDownRefresh.textContent = timeLeft + ` s to refresh`
+    timeLeft -= 1
+    console.log(timeLeft)
+    if (timeLeft < 0) {
+      countDownRefresh.textContent = 'RIP'
+      // explosion.start(500) FIND A CONFETTI ALTERNATIVE
+      //the countdown then resets the pieces
+      //the countdown then cues an explosion mp3
+      clearInterval(timer)
+      }
+    },1000)
+    
 }
 
 
