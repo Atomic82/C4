@@ -1,16 +1,16 @@
-# C4
+# C4💣
 [Play game](https://atomic82.github.io/Connect-Four/)
 ----
 The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
 ----
-# Screenshots/IceBox Items
+# Screenshots💣
 [Game board](/assets/ScreenshotGame.png)
 
 [Custom cursor](/assets/SkeleCursor.png)
 
 [Bomb](/assets/RedBomb.png)
 
-# Stretch goals
+# Stretch goals💣
 - Computer player using minimax method.
 - Player clicks upon slots make an explosion noise.
 - Line through four chips showing a clear and decisive winner.
@@ -19,7 +19,7 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 - Game board rotates and artificial gravity is implemented, making chips fall out of the board as the player tries to connect four. Player can click on game chips to prevent them from falling out. This will be a difficulty level.
 - Make responsive to all devices and breakpoints.
 
-# Technology Used and Implemented
+# Technology Used and Implemented💣
 ----
 
 <a href="a"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/></a>
@@ -36,10 +36,7 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 
 <a href="a"><img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"/></a>
 
-Credits
+Credits💣
 ----
 Song: Detonator - Jawns
 DMCA free, Owned by [NightMode Records](https://nightmoderecs.com/)
-
-Psuedocode
-----
