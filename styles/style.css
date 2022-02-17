@@ -60,14 +60,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/* .tenor-gif-embed {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  
-  background-color: rgba(104, 185, 57, 0);
-  z-index: -10;
-} */
+
 
 button {
   background-image: url("/assets/SeeThroughBomb.png");

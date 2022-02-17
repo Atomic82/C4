@@ -74,9 +74,6 @@ const winningCombos = [
 
 
 /*---------------------------- Variables (state) ----------------------------*/
-
-const playerRed = 1
-const computerPlayer = -1
 let winner, turn, circleArray
 
 /*------------------------ Cached Element References ------------------------*/
@@ -91,20 +88,7 @@ const muteBtn = document.getElementById('muteBtn')
 let countDownRefresh = document.getElementById('countdown')
 let timeLeft = 30
 
-// const explosionFile = document.querySelector('#bomb')
-// const explosion = new Audio('/audio/Explosion.mp3')
 
-// detonatorFile.addEventListener('click', (evt) => {
-//   console.log('IT WORKS')
-//   console.log(evt.target)
-  
-// })
-
-// window.addEventListener('load', (evt) => {
-//   console.log('Bombs primed')
-//   detonatorOpenerFile.volume = .1
-//   detonatorOpenerFile.play()
-// })
 
 detonatorOpenerFile.addEventListener('load', (evt) => {
   console.log('Bombs rigged')
@@ -112,15 +96,6 @@ detonatorOpenerFile.addEventListener('load', (evt) => {
   
   // detonator.pause()
 })
-
-
-
-// explosionFile.addEventListener('click', (evt) => {
-//   console.log('bomb works')
-//   console.log(evt.target)
-//   explosion.volume = .1
-//   explosion.play()
-// })
 
 
 
@@ -158,22 +133,6 @@ function handleClick(event) {
     detonatorOpenerFile.play()
 }
 init()
-
-
-
-  // if(firstClick) {
-    //   firstClick = false;
-
-    // }
-
-// resetBtn.addEventListener('click', (evt) => {
-//   console.log('RESET')
-  
-//   //Need a thing here that resets the chips
-
-// })
-
-
 
 function init() {
   circleArray = [
@@ -220,38 +179,32 @@ function checkPlacement(idx) {
   }
 }
 
-
-
-
 const redBomb = '../assets/RedBomb.png'
 const whiteBomb = '../assets/WhiteBomb.png'
 
 function render() {
 
   for (let i = 0; i < circleArray.length; i++){
-  // console.log(squares[i])
     if (circleArray[i] === 1){
-    gameBoard[i].style.backgroundColor = 'Red'
-    // const token=document.createElement('img')
-    // token.src=redBomb
-    // gameBoard[i].appendChild(token)
+    // gameBoard[i].style.backgroundColor = 'Red'
+    const token=document.createElement('img')
+    token.src=redBomb
+    gameBoard[i].appendChild(token)
 
     } else if 
     (circleArray[i] === -1) {
-    gameBoard[i].style.backgroundColor = 'White'
-    // const token=document.createElement('img')
-    // token.src=whiteBomb
-    // gameBoard[i].appendChild(token)
+    // gameBoard[i].style.backgroundColor = 'White'
+    const token=document.createElement('img')
+    token.src=whiteBomb
+    gameBoard[i].appendChild(token)
 
     } else {
-      // gameBoard[i].textContent = ""
     }
   }
   
 }
 
 muteBtn.addEventListener('click', (evt) => {
-  console.log('mute')
   detonator.pause()
 })
 
@@ -265,7 +218,7 @@ function getWinner(){
       const d = winningCombos[i][3]
 
       
-        if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
+  if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
             console.log('Red wins')
           message.textContent = 'Red wins';
             winner = 'Red'
@@ -275,17 +228,13 @@ function getWinner(){
             winner = 'White'
           }
           
-          if(numOfTurns === 42 && winner === null){
+  if(numOfTurns === 42 && winner === null){
         console.log('Tie')
         message.textContent = 'Tie';
-        }
-        
+        } 
   }  
-  
 }
 
-//Refreshes page after 20 seconds, so hurry up and win bitch
 setTimeout(function(){
   window.location.reload(1);
 }, 31000)
-console.log(setTimeout)
