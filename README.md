@@ -1,4 +1,5 @@
-[C4](https://atomic82.github.io/Connect-Four/)
+# C4
+[Play game](https://atomic82.github.io/Connect-Four/)
 ----
 The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
 ----
@@ -8,6 +9,7 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 [Custom cursor](/assets/SkeleCursor.png)
 
 [Bomb](/assets/RedBomb.png)
+
 ----
 # Stretch goals
 - Computer player using minimax method.
@@ -20,7 +22,8 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 
 Technology Implemented
 ----
-	(https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white)
+
+<a href="a"><img src="https://img.shields.io/badge/Slack-4A154B?style=for-the-badge&logo=slack&logoColor=white"/></a>
 
   (https://img.shields.io/badge/Zoom-2D8CFF?style=for-the-badge&logo=zoom&logoColor=white)
 
