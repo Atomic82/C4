@@ -1,19 +1,19 @@
-C4 
+# C4 
 The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
 ----
 [Play Game](https://atomic82.github.io/Connect-Four/)
 ----
-Screenshots
+# Screenshots
 ----
 [Game board](/assets/ScreenshotGame.png)
 [Custom cursor](/assets/SkeleCursor.png)
 [Bomb](/assets/RedBomb.png)
 ----
-User Stories
+# User Stories
 ----
 
 ----
-Stretch goals
+# Stretch goals
 ----
 - Computer player
 - Player clicks on slots will make an explosion noise
