@@ -36,7 +36,13 @@ The family fun game of Connect4... browser-based, and now without plastic chokin
 
 <a href="a"><img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white"/></a>
 
-Credits💣
+# Credits💣
 ----
+Graphic design assets, emotional support, and food delivery: Jo Daniels
+
 Song: Detonator - Jawns
 DMCA free, Owned by [NightMode Records](https://nightmoderecs.com/)
+
+# Freelance Contact
+----
+[Atomic82](https://www.atomic82.com/)
