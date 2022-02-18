@@ -185,7 +185,6 @@ function getWinner(){
         } 
   }  
 }
-
 setTimeout(function(){
   window.location.reload(1);
 }, 31000)
