@@ -1,4 +1,4 @@
-/*-------------------------------- Constants --------------------------------*/
+
 const winningCombos = [
   [0, 1, 2, 3],
   [3, 4, 5, 6],
@@ -70,23 +70,21 @@ const winningCombos = [
   [12, 19, 26, 33], 
   [13, 20, 27, 34],
 ]
-/*---------------------------- Variables (state) ----------------------------*/
+
 let winner, turn, circleArray
-/*------------------------ Cached Element References ------------------------*/
+
 const gameBoard = document.querySelectorAll(".circle")
 const message = document.getElementById("message")
 const detonatorFile = document.querySelector('#detonator')
 const detonator = new Audio('/audio/Detonator.mp3')
-const detonatorOpenerFile = document.querySelector('#detonatorOpener')
-const detonatorOpener = new Audio('/audio/DetonatorOpener.mp3')
 const muteBtn = document.getElementById('muteBtn')
 let countDownRefresh = document.getElementById('countdown')
 let timeLeft = 30
-/*----------------------------- Event Listeners -----------------------------*/
+
 gameBoard.forEach(function(circle){
   circle.addEventListener("click", handleClick)
 });
-/*-------------------------------- Functions --------------------------------*/
+
 function handleClick(event) {
   let circleIndex = parseInt(event.target.id);
   const correctIdx = checkPlacement(circleIndex);
@@ -138,7 +136,6 @@ function checkPlacement(idx) {
   console.log('sanity')
   for (let i = idx + 35; i <= 41 && i >= 0; i -=7){
     if (circleArray[i] === null){
-      console.log(i)
       return i;
     }
   }
@@ -176,17 +173,14 @@ function getWinner(){
       const d = winningCombos[i][3]
   
   if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === 4){
-            console.log('Red wins')
           message.textContent = 'Red wins';
             winner = 'Red'
           } else if (circleArray[a] + circleArray[b] + circleArray[c] + circleArray[d] === -4){
-            console.log('White wins')
           message.textContent = 'White wins';
             winner = 'White'
           }
           
   if(numOfTurns === 42 && winner === null){
-        console.log('Tie')
         message.textContent = 'Tie';
         } 
   }  
