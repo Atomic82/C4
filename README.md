@@ -2,7 +2,7 @@
 ----
 [Play game](https://super-ant.surge.sh/)
 
-The family fun game of Connect4... browser-based, and now without plastic choking hazards for children under age four.
+The family fun game of Connect Four... browser-based, and now without plastic choking hazards for children under age four.
 
 # Screenshots💣
 ----
